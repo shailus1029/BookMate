@@ -56,10 +56,10 @@ const addUser = body => {
 	});
 };
 
-const getList = () => {
+const getList = filter => {
 	const User = mongoose.model("User", userSchema);
 	return new Promise((resolve, reject) => {
-		User.find({}, (err, data) => {
+		User.find(filter, (err, data) => {
 			if (err) {
 				return reject(err);
 			} else {
