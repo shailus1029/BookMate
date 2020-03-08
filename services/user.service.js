@@ -1,5 +1,7 @@
 const userModel = require("../models/user.model");
 
+// user service for user controller
+
 exports.createUser = async function(body) {
 	return userModel.addUser(body).then(data => {
 		return data;
