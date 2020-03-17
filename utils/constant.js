@@ -7,7 +7,11 @@ const errors = {
 	invalidMobileNumber: {
 		code: "INVALID_MOBILENUMBER",
 		msg: "Invalid mobile number"
-	}
+	},
+	noBookName: { code: "MISSING_BOOKNAME", msg: "book name is missing" },
+	noUserId: { code: "MISSING_USERID", msg: "userId is missing" },
+	noBookPrice: { code: "MISSING_BOOKPRICE", msg: "book price is missing" },
+	noBookId: { code: "MISSING_BOOKID", msg: "book Id is missing" }
 };
 
 module.exports = {

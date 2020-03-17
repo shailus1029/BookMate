@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const db = require("./config/db");
+const path = require("path");
 
 // using http server to bind the socket io
 const http = require("http");
@@ -18,6 +19,7 @@ require("./routes")(app);
 //adding body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/uploads", express.static(path.join(__dirname, "./uploads")));
 
 //defining the port to run the server
 const port = 8000;
