@@ -1,2 +1,0 @@
-# BookMate
-BookMate API Server
